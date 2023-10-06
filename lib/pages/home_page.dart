@@ -1,5 +1,4 @@
-import 'package:bank_app_ui/util/login_button.dart';
-import 'package:bank_app_ui/util/user_text_field.dart';
+import 'package:bank_app_ui/components/action_buttons.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,65 +7,47 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF7F7F7),
-      body: Padding(
-        padding: const EdgeInsets.only(bottom: 20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Stack(
-              children: [
-                Container(
-                  height: 401,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFF229397),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(50),
-                      bottomRight: Radius.circular(50),
-                    ),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 150, left: 140),
-                  child: Text(
-                    'Welcome',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 200,
-                    left: 50,
-                  ),
-                  child: Container(
-                    height: 257,
-                    width: 273,
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(50),
-                          topRight: Radius.circular(10),
-                          bottomLeft: Radius.circular(10),
-                          bottomRight: Radius.circular(50),
-                        )),
-                  ),
-                ),
-              ],
+            Text(
+              'Welcome Back',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+              ),
             ),
-            const Column(
-              children: [
-                UserTextField(icon: Icons.person, label: 'Username'),
-                UserTextField(icon: Icons.lock_rounded, label: 'Password'),
-              ],
+            Text(
+              'Kennedy Emeka',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            const LoginButton(),
-            const Text('Forgot Password?')
           ],
         ),
+        actions: const [
+          Icon(
+            Icons.notifications_none_outlined,
+            color: Colors.black,
+            size: 34,
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 30, left: 32),
+            child: Image.asset('assets/images/card.png'),
+          ),
+          const Expanded(
+            child: ActionButton(),
+          )
+        ],
       ),
     );
   }

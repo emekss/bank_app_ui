@@ -18,7 +18,11 @@ class LoginButton extends StatelessWidget {
         child: const Center(
           child: Text(
             'Login',
-            style: TextStyle(fontSize: 18, color: Colors.white),
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
