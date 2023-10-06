@@ -7,7 +7,9 @@ class CurvedNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
-      backgroundColor: const Color(0xFF229397),
+      color: const Color(0xFF229397),
+      backgroundColor: Colors.white,
+      buttonBackgroundColor: Colors.white,
       items: const [
         Icon(Icons.home),
         Icon(Icons.wallet_rounded),

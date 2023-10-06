@@ -1,4 +1,3 @@
-import 'package:bank_app_ui/components/curved_navbar.dart';
 import 'package:bank_app_ui/util/login_button.dart';
 import 'package:bank_app_ui/util/user_text_field.dart';
 import 'package:flutter/material.dart';
@@ -74,7 +73,6 @@ class WelcomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: const CurvedNavBar(),
     );
   }
 }

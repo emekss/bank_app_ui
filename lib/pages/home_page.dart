@@ -1,4 +1,5 @@
 import 'package:bank_app_ui/components/action_buttons.dart';
+import 'package:bank_app_ui/components/curved_navbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,6 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         elevation: 0,
         backgroundColor: Colors.transparent,
         title: const Column(
@@ -41,7 +43,7 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 30, left: 32),
+            padding: const EdgeInsets.only(top: 30, left: 10),
             child: Image.asset('assets/images/card.png'),
           ),
           const Expanded(
@@ -49,6 +51,7 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: const CurvedNavBar(),
     );
   }
 }

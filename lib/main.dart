@@ -1,4 +1,5 @@
 import 'package:bank_app_ui/pages/home_page.dart';
+import 'package:bank_app_ui/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +12,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const WelcomePage(),
+        routes: {
+          '/homePage': (context) => const HomePage(),
+        });
   }
 }
