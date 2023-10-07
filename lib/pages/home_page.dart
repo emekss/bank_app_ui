@@ -48,6 +48,13 @@ class HomePage extends StatelessWidget {
           ),
           const Expanded(
             child: ActionButton(),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+            child: Image.asset(
+              'assets/images/graph.png',
+              height: 150,
+            ),
           )
         ],
       ),
